@@ -39,8 +39,11 @@ np.set_printoptions(threshold=sys.maxsize)
 def main():
 
     print("*** Before running this code ensure you keep the default batch size of 1. The code has not been engineered to support higher batch sizes. See README for more detail. Remove the exit() statement to use code. ***")
-    exit()
-
+    question = input("did you leave the batch size at 1? (Y/n)")
+    if(question!='n'):
+        continue
+    else:
+        exit()
     writer = SummaryWriter()
 
     timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
